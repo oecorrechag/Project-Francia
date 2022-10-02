@@ -1,12 +1,12 @@
 
 from pathlib import Path
-from secretos import direction
+from utils.secretos import drive
 
 def direcciones(proyecto):
 
     '''Esta funcion toma el nombre de un proyecto y lo conecta con el drive personal mediante paths'''
-    
-    filepath = Path(direction, proyecto)
+
+    filepath = Path(drive, proyecto)
 
     G_raw = filepath.joinpath('raw')
     G_processed = filepath.joinpath('processed')
@@ -17,4 +17,3 @@ def direcciones(proyecto):
     G_reports_figures = filepath.joinpath('reports','figures')
 
     return G_raw, G_processed, G_interim, G_external, G_models, G_reports, G_reports_figures
-    
